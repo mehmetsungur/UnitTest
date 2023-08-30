@@ -1,18 +1,17 @@
 package Day01;
 
 import org.junit.jupiter.api.*;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Test03_BeforeAfterEach {
     String str;
 
-    @BeforeEach
+    @BeforeEach // Aşağıdaki method her bir test başlamadan önce çalışır.
     void BeforeEach(){
         str="JUnit Working";
     }
 
-    @AfterEach
+    @AfterEach // Aşağıdaki method her bir test bittikten sonra çalışır.
     void afterEach(){
         str=null;
         System.out.println("********** afterEach working!");
