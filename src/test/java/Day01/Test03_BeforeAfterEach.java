@@ -1,9 +1,6 @@
 package Day01;
 
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,15 +19,17 @@ public class Test03_BeforeAfterEach {
     }
 
     @Test
-    void testSplit(){
+    void testSplit(TestInfo info){
         String[] realValue = str.split(" ");
         String[] waitValue = {"JUnit", "Working"};
 
+        System.out.println(info.getDisplayName() + " working!");
         Assertions.assertArrayEquals(waitValue,realValue);
     }
 
     @Test
-    void testLength(){
+    void testLength(TestInfo info){
+        System.out.println(info.getDisplayName() + " working!");
         assertEquals(13,str.length());
     }
 }
