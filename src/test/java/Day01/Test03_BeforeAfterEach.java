@@ -5,6 +5,8 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class Test03_BeforeAfterEach {
     String str;
 
@@ -29,9 +31,6 @@ public class Test03_BeforeAfterEach {
 
     @Test
     void testLength(){
-        String[] realValue = str.split(" ");
-        String[] waitValue = {"JUnit", "Working"};
-
-        Assertions.assertArrayEquals(waitValue,realValue);
+        assertEquals(13,str.length());
     }
 }
