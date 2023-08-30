@@ -1,9 +1,6 @@
 package Day01;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class Test04_BeforeAfterAll {
@@ -13,5 +10,17 @@ public class Test04_BeforeAfterAll {
     }
 
     @AfterAll
+    static void closeFile(){
+        System.out.println("close file");
+    }
 
+    @Test
+    void testSplitWithArrays(TestInfo info){
+        String str="JUnit Working";
+        String[] realValue = str.split(" ");
+        String[] waitValue = {"JUnit", "Working"};
+
+        System.out.println(info.getDisplayName() + " working!");
+        Assertions.assertArrayEquals(waitValue,realValue);
+    }
 }
