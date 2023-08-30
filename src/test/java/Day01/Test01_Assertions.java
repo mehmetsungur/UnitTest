@@ -1,8 +1,13 @@
 package Day01;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Test01_Assertions {
     // Test methodların erişim tipi public olmak zorunda(JUnit4 ve Öncesi)
@@ -33,5 +38,22 @@ public class Test01_Assertions {
 
         //assertEquals(realValue,waitValue, "ToUpperCase methodu hatalı");
         assertNotEquals(realValue,waitValue, "ToUpperCase methodu hatalı");
+    }
+
+    @Test
+    public void testListContains(){
+        List<Integer> list = Arrays.asList(1,2,3,4);
+
+        assertTrue(list.contains(2));
+        assertFalse(list.contains(21));
+    }
+
+    @Test
+    public void testSplit(){
+        String str = "Unit Test";
+        String[] realValue=str.split(" ");
+        String[] waitValue= {"Unit","Test"};
+
+        assertTrue(Arrays.equals(waitValue,realValue));
     }
 }
