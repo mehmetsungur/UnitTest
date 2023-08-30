@@ -2,6 +2,7 @@ package Day01;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class Test01_Assertions {
     // Test methodların erişim tipi public olmak zorunda(JUnit4 ve Öncesi)
@@ -20,6 +21,17 @@ public class Test01_Assertions {
 
         // İki değeri de karşılaştırır.
         // Eğer değerler aynı ise test geçer aksi halde kalır.
-        assertEquals(waitValue,realValue);
+        assertEquals(waitValue,realValue, "Length methodu hatalı");
+    }
+
+    //String --> toUpperCase
+    @Test
+    public void testToUpperCase(){
+        String str = "Unit Test";
+        String realValue = str.toUpperCase();
+        String waitValue = str;
+
+        //assertEquals(realValue,waitValue, "ToUpperCase methodu hatalı");
+        assertNotEquals(realValue,waitValue, "ToUpperCase methodu hatalı");
     }
 }
