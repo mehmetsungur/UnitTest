@@ -39,4 +39,10 @@ public class Test03_ParameterizedTest {
     void testUpperCase2(String str1, String str2){
         assertEquals(str2,str1.toUpperCase());
     }
+
+    @ParameterizedTest
+    @CsvSource(value = {"true,java,a", "false,junit,b"})
+    void testContains(boolean b, String str1, String str2){
+        assertEquals(b,str1.contains(str2));
+    }
 }
