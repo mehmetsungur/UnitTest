@@ -1,6 +1,8 @@
 package Day02;
 
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class Test01_TestingExceptions {
@@ -36,6 +38,8 @@ public class Test01_TestingExceptions {
     void testExceptions3(){
         int sayi1=6;
         int sayi2=0;
+
+        assertEquals(2,divide(6,3));
 
         // System.out.println(sayi1/sayi2);
         assertThrows(ArithmeticException.class,()->{
