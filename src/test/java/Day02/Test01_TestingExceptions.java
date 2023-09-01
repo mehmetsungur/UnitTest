@@ -26,6 +26,9 @@ public class Test01_TestingExceptions {
     }
 
     private int divide(int x, int y){
+        //1 bölme işlemi: 6/3=2
+        //2 AritmetikExec: 6/0
+        //3 6/3 != 4
         return x/y;
     }
 
