@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aec390d-de4f-4f13-a0f9-b9c0c0e820c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Day02/Test06_GroupingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Day03/StringModify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Day03/StringModifyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +39,11 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Day03" />
+    </key>
+  </component>
   <component name="RunManager" selected="JUnit.Test03_ParameterizedTest.testContains">
     <configuration name="Test02_DisplayName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UnitTest" />

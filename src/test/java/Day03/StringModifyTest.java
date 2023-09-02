@@ -1,0 +1,16 @@
+package Day03;
+
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class StringModifyTest {
+    StringModify object = new StringModify();
+
+    @ParameterizedTest
+    @CsvSource(value = {"BC,ABC","B,AB"})
+    void deleteIfAIsInTwoPositionTest(String expected, String param){
+        assertEquals(expected.object.deleteIfAIsInTwoPosition(param));
+    }
+}
