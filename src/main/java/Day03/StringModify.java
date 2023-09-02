@@ -5,6 +5,6 @@ public class StringModify {
         String firstTwoChars = str.substring(0,2); //AABCD->AA
         String afterTwoChars = str.substring(2);
 
-        return firstTwoChars+afterTwoChars;
+        return firstTwoChars.replaceAll("A","") + afterTwoChars;
     }
 }
